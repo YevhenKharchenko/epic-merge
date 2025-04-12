@@ -1,0 +1,101 @@
+.hero-section {
+  background-image: url(../img/hero/hero-img-mob-min.png),
+    url(../img/hero/hero-bg-mob-min.png),
+    linear-gradient(92deg, #a50000 0%, #ff953b 100%);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: center bottom, center, center;
+  background-size: 333px 316px, cover, cover;
+  padding-top: 76px;
+
+  @include media(desktop) {
+    background-image: url(../img/hero/hero-bg-desk-min.png),
+      linear-gradient(92deg, #a50000 0%, #ff953b 100%);
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center;
+    background-size: cover, cover;
+  }
+}
+
+.hero-background-wrapper {
+  padding-bottom: 273px;
+
+  @include media(desktop) {
+    padding-top: 64px;
+    padding-bottom: 57px;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(../img/hero/hero-img-desk-min.png);
+    background-repeat: no-repeat;
+    background-position: right 52px center;
+    background-size: 602px 615px;
+  }
+}
+
+.hero-container {
+  padding-left: 9px;
+  padding-right: 9px;
+
+  @include media(desktop) {
+    padding-left: 100px;
+  }
+}
+
+.hero-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include media(desktop) {
+    max-width: 614px;
+  }
+}
+
+.hero-img {
+  margin-bottom: 7px;
+}
+
+.hero-title {
+  font-weight: 900;
+  font-size: 20px;
+  text-align: center;
+  color: $_white_text_color;
+  margin-bottom: 22px;
+
+  @include media(desktop) {
+    font-size: 28px;
+    max-width: fit-content;
+  }
+}
+
+.hero-text {
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  color: $_white_text_color;
+  margin-bottom: 22px;
+  max-width: 340px;
+
+  @include media(desktop) {
+    font-size: 18px;
+    margin-bottom: 42px;
+    max-width: fit-content;
+  }
+}
+
+.hero-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+
+  &:active {
+    transform: scale(0.9);
+  }
+
+  @include media(desktop) {
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
