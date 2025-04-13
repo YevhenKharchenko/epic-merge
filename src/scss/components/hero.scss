@@ -5,12 +5,14 @@
   background-repeat: no-repeat, no-repeat;
   background-position: center bottom, center;
   background-size: 375px 386px, cover;
+  scroll-margin-top: 60px;
 
   @include media(desktop) {
     background-image: url(../img/hero/hero-bg-desk.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    scroll-margin-top: 60px;
   }
 }
 

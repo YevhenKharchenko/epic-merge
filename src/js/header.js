@@ -48,7 +48,7 @@ function onOutsideMenuClick(e) {
 
 const navLinks = document.querySelectorAll('.nav-list-link');
 const sectionIds = Array.from(navLinks).map(link =>
-  link.getAttribute('href').replace('#', '')
+  link.getAttribute('href').replace('./index.html#', '')
 );
 
 const sections = sectionIds
@@ -64,7 +64,9 @@ const observerOptions = {
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     const id = entry.target.id;
-    const navLink = document.querySelector(`.nav-list-link[href="#${id}"]`);
+    const navLink = document.querySelector(
+      `.nav-list-link[href="./index.html#${id}"]`
+    );
 
     if (entry.isIntersecting) {
       navLinks.forEach(link => link.classList.remove('active'));
@@ -74,35 +76,3 @@ const observer = new IntersectionObserver(entries => {
 }, observerOptions);
 
 sections.forEach(section => observer.observe(section));
-
-navLinks.forEach(link => {
-  link.addEventListener('click', onNavigationLinkClick);
-});
-
-function onNavigationLinkClick(e) {
-  e.preventDefault();
-
-  navLinks.forEach(link => link.classList.remove('active'));
-
-  e.target.classList.add('active');
-
-  const targetID = e.target.getAttribute('href').substring(1);
-
-  if (
-    location.href.includes('privacy-policy') ||
-    location.href.includes('terms-and-conditions') ||
-    location.href.includes('cookies-policy')
-  ) {
-    location.href = './index.html#' + targetID;
-    return;
-  }
-
-  scrollToElement(targetID);
-}
-
-function scrollToElement(elementId) {
-  const targetElement = document.getElementById(elementId);
-  if (targetElement) {
-    targetElement.scrollIntoView({ behavior: 'smooth' });
-  }
-}
