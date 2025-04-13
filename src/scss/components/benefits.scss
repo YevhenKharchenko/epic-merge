@@ -33,6 +33,10 @@
   margin-left: auto;
   margin-right: auto;
   visibility: hidden;
+
+  @include media(desktop) {
+    max-width: 100vw;
+  }
 }
 
 .benefits-swiper-container.show {

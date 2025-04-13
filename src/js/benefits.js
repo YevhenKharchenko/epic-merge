@@ -7,9 +7,11 @@ Swiper.use([Autoplay]);
 
 const benefitsSwiperEl = document.querySelector('.benefits-swiper-container');
 
-const benefitsSwiper = new Swiper('.benefits-swiper-container', {
+let benefitsSwiper;
+
+benefitsSwiper = new Swiper('.benefits-swiper-container', {
   direction: 'horizontal',
-  loop: false,
+  loop: true,
   grabCursor: true,
   slidesPerView: 1,
   initialSlide: 0,
@@ -23,7 +25,9 @@ const benefitsSwiper = new Swiper('.benefits-swiper-container', {
   },
   breakpoints: {
     1440: {
+      loop: false,
       initialSlide: 2,
+      slidesPerView: 5,
     },
   },
   on: {
