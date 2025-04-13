@@ -1,13 +1,13 @@
 .benefits-section {
-  background-color: $_main_bg_color;
-  padding-top: 18px;
-  padding-bottom: 88px;
+  background-color: #fff;
+  padding-top: 40px;
+  padding-bottom: 54px;
   scroll-margin-top: 60px;
 
   @include media(desktop) {
     scroll-margin-top: 70px;
-    padding-top: 14px;
-    padding-bottom: 48px;
+    padding-top: 37px;
+    padding-bottom: 37px;
   }
 }
 
@@ -27,23 +27,9 @@
   padding-right: 0;
 }
 
-.benefits-title {
-  margin-bottom: 40px;
-
-  @include media(desktop) {
-    margin-bottom: 25px;
-  }
-}
-
-.benefits-title-img {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .benefits-swiper-container {
-  position: relative;
-  max-width: 284px;
-  border-radius: 6px;
+  max-width: 236px;
+  border-radius: 22px;
   margin-left: auto;
   margin-right: auto;
   visibility: hidden;
@@ -54,13 +40,13 @@
 }
 
 .benefits-slide {
-  border: 4px solid #a50000;
-  border-radius: 6px;
-  padding: 12px;
+  border-radius: 22px;
+  box-shadow: 0 0 22px 0 #fff, inset 0 0 22px 0 rgba(1, 150, 229, 0.8);
+  background-color: #019df1;
+  padding: 22px 16px 22px 16px;
   max-width: 284px;
-  height: 206px !important;
+  height: 326px !important;
   display: flex;
-  background-color: #fff;
   justify-content: center;
   align-items: center;
 }
@@ -75,17 +61,22 @@
 .benefits-circle-wrapper {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .benefits-subtitle {
-  font-weight: 600;
-  font-size: 16px;
+  font-family: 'Fredoka One', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5;
   text-align: center;
-  margin-bottom: 8px;
+  color: $_white_text_color;
 }
 
 .benefits-text {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 18px;
+  line-height: 1.44444;
   text-align: center;
+  color: $_white_text_color;
 }

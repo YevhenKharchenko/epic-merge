@@ -1,37 +1,50 @@
 import Swiper from 'swiper';
-import { Autoplay } from 'swiper/modules';
 import 'swiper/css/bundle';
-import { observeSwiperAutoplay } from './observer.js';
 
-Swiper.use([Autoplay]);
+const galleryLeftArrow = document.getElementById('galleryLeftArrow');
+const galleryRightArrow = document.getElementById('galleryRightArrow');
 
-const gallerySwiperEl = document.querySelector('.gallery-swiper-container');
+let gallerySwiper;
 
-const gallerySwiper = new Swiper('.gallery-swiper-container', {
+gallerySwiper = new Swiper('.gallery-swiper-container', {
   direction: 'horizontal',
   loop: false,
   grabCursor: true,
   slidesPerView: 1,
-  initialSlide: 0,
+  initialSlide: 1,
   spaceBetween: 20,
   grabCursor: true,
   allowTouchMove: true,
   speed: 500,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
   breakpoints: {
     1440: {
-      spaceBetween: 32,
       initialSlide: 2,
+      spaceBetween: 0,
     },
   },
   on: {
     init: () => {
       document.querySelector('.gallery-swiper-container').classList.add('show');
     },
+    slideChange: () => {
+      updateGalleryArrows();
+    },
   },
 });
 
-observeSwiperAutoplay(gallerySwiper, gallerySwiperEl);
+updateGalleryArrows();
+
+function updateGalleryArrows() {
+  if (gallerySwiper) {
+    galleryLeftArrow.disabled = gallerySwiper.isBeginning;
+    galleryRightArrow.disabled = gallerySwiper.isEnd;
+  }
+}
+
+galleryLeftArrow.addEventListener('click', () => {
+  gallerySwiper.slidePrev();
+});
+
+galleryRightArrow.addEventListener('click', () => {
+  gallerySwiper.slideNext();
+});
