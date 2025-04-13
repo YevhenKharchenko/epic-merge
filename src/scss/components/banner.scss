@@ -2,7 +2,7 @@
   background-color: #fff;
   width: 100%;
   max-width: 335px;
-  border: 1px solid #900909;
+  border: 1px solid #270137;
   box-shadow: 0 14px 42px 0 rgba(8, 15, 52, 0.06);
   border-radius: 20px;
   position: fixed;
@@ -46,14 +46,22 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 1.875;
-  color: #180f29;
-  padding: 47px 42px 37px 37px;
+  color: #270137;
+  padding: 47px 41px 37px 37px;
 
   @include media(desktop) {
     font-size: 18px;
     line-height: 1.66667;
     max-width: 648px;
     padding: 0px 0px 0px 0px;
+  }
+}
+
+.cookie-optional-text {
+  display: none;
+
+  @include media(desktop) {
+    display: inline;
   }
 }
 
@@ -74,7 +82,7 @@
   border-radius: 56px;
   padding: 18px 24px;
   box-shadow: 0 3px 12px 0 rgba(74, 58, 255, 0.18);
-  background: #900909;
+  background: #00a5fe;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.125;
@@ -82,7 +90,7 @@
 }
 
 .cookie-decline-btn {
-  border: 1px solid #ff953b;
+  border: 1px solid #eff0f6;
   border-radius: 56px;
   padding: 18px 26px;
   box-shadow: 0 4px 8px 0 rgba(74, 58, 255, 0.08);
@@ -90,7 +98,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 1.125;
-  color: #180f29;
+  color: #270137;
 }
 
 .show-cookie-banner {

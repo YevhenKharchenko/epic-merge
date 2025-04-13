@@ -1,43 +1,41 @@
 .hero-section {
-  background-image: url(../img/hero/hero-img-mob-min.png),
-    url(../img/hero/hero-bg-mob-min.png),
-    linear-gradient(92deg, #a50000 0%, #ff953b 100%);
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: center bottom, center, center;
-  background-size: 333px 316px, cover, cover;
-  padding-top: 76px;
+  padding-top: 80px;
+  background-image: url(../img/hero/hero-tablet-mob.png),
+    url(../img/hero/hero-bg-mob.jpg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: center bottom, center;
+  background-size: 375px 386px, cover;
 
   @include media(desktop) {
-    background-image: url(../img/hero/hero-bg-desk-min.png),
-      linear-gradient(92deg, #a50000 0%, #ff953b 100%);
-    background-repeat: no-repeat, no-repeat;
-    background-position: center, center;
-    background-size: cover, cover;
+    background-image: url(../img/hero/hero-bg-desk.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 }
 
 .hero-background-wrapper {
-  padding-bottom: 273px;
+  padding-bottom: 365px;
 
   @include media(desktop) {
-    padding-top: 64px;
-    padding-bottom: 57px;
+    padding-top: 98px;
+    padding-bottom: 108px;
     max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
-    background-image: url(../img/hero/hero-img-desk-min.png);
+    background-image: url(../img/hero/hero-tablet-desk.png);
     background-repeat: no-repeat;
-    background-position: right 52px center;
-    background-size: 602px 615px;
+    background-position: right 0 center;
+    background-size: 960px 728px;
   }
 }
 
 .hero-container {
-  padding-left: 9px;
-  padding-right: 9px;
+  padding-left: 18px;
+  padding-right: 18px;
 
   @include media(desktop) {
-    padding-left: 100px;
+    padding-left: 120px;
   }
 }
 
@@ -47,40 +45,37 @@
   align-items: center;
 
   @include media(desktop) {
-    max-width: 614px;
+    max-width: 512px;
   }
 }
 
 .hero-img {
-  margin-bottom: 7px;
+  margin-bottom: 0px;
 }
 
 .hero-title {
-  font-weight: 900;
+  font-family: 'Fredoka One', sans-serif;
+  font-weight: 400;
   font-size: 20px;
+  line-height: 1.6;
+  text-transform: uppercase;
   text-align: center;
   color: $_white_text_color;
-  margin-bottom: 22px;
+  margin-bottom: 18px;
 
   @include media(desktop) {
-    font-size: 28px;
-    max-width: fit-content;
+    font-size: 24px;
+    line-height: 1.33333;
   }
 }
 
 .hero-text {
-  font-weight: 700;
-  font-size: 16px;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 1.44444;
   text-align: center;
   color: $_white_text_color;
   margin-bottom: 22px;
-  max-width: 340px;
-
-  @include media(desktop) {
-    font-size: 18px;
-    margin-bottom: 42px;
-    max-width: fit-content;
-  }
 }
 
 .hero-btn {
